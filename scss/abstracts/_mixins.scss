@@ -28,7 +28,7 @@ $laptop: 1200px !default;
 $tablet: 768px !default;
 $mobile: 375px !default;
 
-@mixin respond-to($breakpoint) {
+@mixin respond ($breakpoint) {
   @if $breakpoint == large {
     @media (max-width: $desktop) {
       @content;
