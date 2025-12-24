@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as vars;
+
+.fifth-block {
+  height: 151px;
+  background-color: vars.$color-bg-fifth-block;
+  display: flex;
+  align-items: center;
+  padding-left: 406px;
+
+  .footer-content {
+    color: vars.$color-footer-text;
+  }
+
+  .name {
+    font-size: 21px;
+  }
+
+  .copyright {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 18px;
+  }
+}

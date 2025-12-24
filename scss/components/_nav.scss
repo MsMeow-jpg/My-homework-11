@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as vars;
+
+.nav {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+}
+
+.first-block {
+  a:not(.home) {
+    font-size: 14px;
+    text-decoration: none;
+    color: vars.$color-text-primary;
+  }
+
+  .home {
+    font-size: 14px;
+    color: vars.$color-text-home;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,6 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as vars;
+
+.write-btn {
+  @include mixins.button-styles(vars.$color-btn-bg, vars.$color-btn-bg-hover);
+}

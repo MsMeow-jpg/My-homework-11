@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as vars;
+
+.video-wrapper {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  transition: margin-top 0.5s ease;
+}
+
+.how-i-work-image {
+  width: 1110px;
+  height: 600px;
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 0;
+  transition: width 0.5s ease, height 0.5s ease, margin-bottom 0.5s ease;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+  animation: pulse 2.5s infinite;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    animation-play-state: paused;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}

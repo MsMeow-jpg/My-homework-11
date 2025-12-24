@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as vars;
+
+body {
+  margin: 0;
+  font-family: vars.$font-family;
+  font-weight: vars.$font-weight-base;
+  font-size: vars.$font-size-base;
+  line-height: vars.$line-height-base;
+  letter-spacing: vars.$letter-spacing-base;
+}
+
+.first-block,
+.second-block,
+.third-block,
+.fourth-block,
+.fifth-block {
+  width: vars.$max-content-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: vars.$container-padding;
+  padding-right: vars.$container-padding;
+  height: auto;
+}
