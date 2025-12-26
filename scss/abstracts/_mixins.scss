@@ -1,3 +1,5 @@
+@use 'variables' as vars;
+
 @mixin button-styles(
   $bg-color, 
   $hover-bg-color, 
@@ -9,7 +11,7 @@
   width: $width;
   height: $height;
   background-color: $bg-color;
-  color: $color-btn-text;
+  color: vars.$color-btn-text;
   border: none;
   cursor: pointer;
   font-size: $font-size;
@@ -22,11 +24,6 @@
     transform: scale(1.05);
   }
 }
-
-$desktop: 1919px !default;
-$laptop: 1200px !default;
-$tablet: 768px !default;
-$mobile: 375px !default;
 
 @mixin respond ($breakpoint) {
   @if $breakpoint == large {
@@ -42,6 +39,29 @@ $mobile: 375px !default;
       @content;
     }
   } @else if $breakpoint == xsmall {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  }
+  @else if $breakpoint == laptop {
+    @media (max-width: $laptop) {
+      @content;
+    }
+  }
+  @else if $breakpoint == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+  @else if $breakpoint == mobile {
     @media (max-width: $mobile) {
       @content;
     }

@@ -1,7 +1,10 @@
+@use '../abstracts/variables' as vars;
+
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: $font-base-size;
-  line-height: $font-base-line-height;
-  letter-spacing: $letter-spacing-base;
+  font-family: vars.$font-family;
+  font-weight: vars.$font-weight-base;
+  font-size: vars.$font-size-base;
+  line-height: vars.$line-height-base;
+  letter-spacing: vars.$letter-spacing-base;
+  color: vars.$color-text-primary;
 }
