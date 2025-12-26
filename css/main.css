@@ -1,18 +1,143 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @forward 'header';
- *   | ^^^^^^^^^^^^^^^^^
- *   '
- *   scss\layout\_index.scss 2:1  @use
- *   scss\main.scss 4:1           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @forward 'header';\d\a   \2502  ^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\layout\\_index.scss 2:1  @use\a   scss\\main.scss 4:1           root stylesheet";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.64;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.64;
+  letter-spacing: 0.1em;
+}
+
+.first-block,
+.second-block,
+.third-block,
+.fourth-block,
+.fifth-block {
+  width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: auto;
+}
+
+.write-btn {
+  width: 225px;
+  height: 65px;
+  background-color: #34547A;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.write-btn:hover {
+  background-color: #2a4060;
+  transform: scale(1.05);
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+}
+
+.first-block a:not(.home) {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+.first-block .home {
+  font-size: 14px;
+  color: #34547A;
+  text-decoration: none;
+}
+
+.video-wrapper {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  transition: margin-top 0.5s ease;
+}
+
+.how-i-work-image {
+  width: 1110px;
+  height: 600px;
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 0;
+  transition: width 0.5s ease, height 0.5s ease, margin-bottom 0.5s ease;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+  animation: pulse 2.5s infinite;
+}
+.play-icon:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  animation-play-state: paused;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+.fifth-block {
+  height: 151px;
+  background-color: #34547A;
+  display: flex;
+  align-items: center;
+  padding-left: 406px;
+}
+.fifth-block .footer-content {
+  color: #fff;
+}
+.fifth-block .name {
+  font-size: 21px;
+}
+.fifth-block .copyright {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 18px;
+}
+
+/*# sourceMappingURL=main.css.map */
