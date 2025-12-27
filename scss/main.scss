@@ -2,6 +2,7 @@
 @use 'base' as *;
 @use 'components' as *;
 @use 'layout' as *;
+@use '../scss/layout/sections' as *;
 
 @include respond('large') {
   .first-block,
