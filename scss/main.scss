@@ -1,8 +1,13 @@
-@use 'abstracts' as *;
-@use 'base' as *;
-@use 'components' as *;
-@use 'layout' as *;
-@use '../scss/layout/sections' as *;
+@use './abstracts/_variables.scss' as *;
+@use './abstracts/_mixins.scss' as *;
+@use './base/_base.scss' as *;
+@use './base/_reset.scss' as *;
+@use './base/_typography.scss' as *;
+@use './components/_nav.scss' as *;
+@use './components/_buttons.scss' as *;
+@use './components/_video.scss' as *;
+@use './layout/_footer.scss' as *;
+@use './layout/_sections.scss' as *;
 
 @include respond('large') {
   .first-block,
