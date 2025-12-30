@@ -1,3 +1,25 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.64;
+  letter-spacing: 0.1em;
+}
+
+.first-block,
+.second-block,
+.third-block,
+.fourth-block,
+.fifth-block {
+  width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: auto;
+}
+
 *,
 *::before,
 *::after {
@@ -22,26 +44,21 @@ body {
   color: #000;
 }
 
-body {
+.nav {
+  display: flex;
+  gap: 40px;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.64;
-  letter-spacing: 0.1em;
 }
 
-.first-block,
-.second-block,
-.third-block,
-.fourth-block,
-.fifth-block {
-  width: 1920px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding-left: 40px;
-  padding-right: 40px;
-  height: auto;
+.first-block a:not(.home) {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+.first-block .home {
+  font-size: 14px;
+  color: #34547A;
+  text-decoration: none;
 }
 
 .write-btn {
@@ -59,23 +76,6 @@ body {
 .write-btn:hover {
   background-color: #2a4060;
   transform: scale(1.05);
-}
-
-.nav {
-  display: flex;
-  gap: 40px;
-  margin: 0;
-}
-
-.first-block a:not(.home) {
-  font-size: 14px;
-  text-decoration: none;
-  color: #000;
-}
-.first-block .home {
-  font-size: 14px;
-  color: #34547A;
-  text-decoration: none;
 }
 
 .video-wrapper {
