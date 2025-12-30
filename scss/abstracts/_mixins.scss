@@ -1,4 +1,4 @@
-@use 'variables' as vars;
+@use '../abstracts/variables' as vars;
 
 @mixin button-styles(
   $bg-color, 
@@ -25,45 +25,28 @@
   }
 }
 
-@mixin respond ($breakpoint) {
-  @if $breakpoint == large {
-    @media (max-width: $desktop) {
-      @content;
-    }
-  } @else if $breakpoint == medium {
-    @media (max-width: $laptop) and (min-width: 769px) {
-      @content;
-    }
-  } @else if $breakpoint == small {
-    @media (max-width: $tablet) {
-      @content;
-    }
-  } @else if $breakpoint == xsmall {
-    @media (max-width: $mobile) {
-      @content;
-    }
-  }
-}
-
 @mixin respond($breakpoint) {
-  @if $breakpoint == desktop {
-    @media (max-width: $desktop) {
+  @if $breakpoint == large {
+    @media screen and (max-width: vars.$desktop) {
       @content;
     }
   }
-  @else if $breakpoint == laptop {
-    @media (max-width: $laptop) {
+  @else if $breakpoint == medium {
+    @media screen and (max-width: vars.$laptop) and (min-width: 769px) {
       @content;
     }
   }
-  @else if $breakpoint == tablet {
-    @media (max-width: $tablet) {
+  @else if $breakpoint == small {
+    @media screen and (max-width: vars.$tablet) {
       @content;
     }
   }
-  @else if $breakpoint == mobile {
-    @media (max-width: $mobile) {
+  @else if $breakpoint == xsmall {
+    @media screen and (max-width: vars.$mobile) {
       @content;
     }
+  }
+  @else {
+    @warn "Unknown breakpoint `#{$breakpoint}`.";
   }
 }
