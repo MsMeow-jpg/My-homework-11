@@ -21,3 +21,13 @@ body {
   padding-right: vars.$container-padding;
   height: auto;
 }
+
+.first-block {
+  height: 700px;
+  background: #eeeff1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 399px;
+  padding-top: 79px;
+  box-sizing: border-box;
+}
